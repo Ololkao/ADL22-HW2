@@ -1,0 +1,10 @@
+# environment related
+**/__pycache__
+/requirements.txt
+
+# homework related
+*.json
+*.csv
+cache/
+output/
+
