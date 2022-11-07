@@ -1,15 +1,13 @@
-export SEED=42
-
 python multiple-choice/run_swag.py \
-  --model_name_or_path "output/cs$SEED/" \
-  --cache_dir "cache/cs$SEED" \
-  --test_file dataset/swag_test.json \
+  --model_name_or_path "output/roberta-wwm-ext-large/cs" \
+  --cache_dir "cache/roberta-wwm-ext-large" \
+  --test_file swag_test.json \
   --max_seq_length 512 \
-  --output_dir "output/test_cs$SEED" \
+  --output_dir "output/test_cs" \
   --do_predict \
-  --num_train_epochs 1 \
+  --num_train_epochs 3 \
   --lr_scheduler_type linear \
-  --seed $SEED \
+  --seed 42 \
   --fp16 \
   --report_to all \
-  --resume_from_checkpoint "output/cs$SEED/"
+  --resume_from_checkpoint "output/roberta-wwm-ext-large/cs"

@@ -11,6 +11,7 @@ def swag_formatter():
     ending_names = [f"ending{i}" for i in range(4)]
     
     for idx, data in enumerate(['train', 'valid', 'test']):
+        print(data)
         results = []
         for element in eval(data):
             pairs = {}
@@ -30,7 +31,7 @@ def swag_formatter():
                     pairs['video-id'] = element[key]
             results.append(pairs)
         json_obj = json.dumps(results, indent=2, ensure_ascii=False)
-        filename = f"{folder}swag_{data}.json" if data != 'test' else "{folder}format_{data}.json"
+        filename = f"{folder}swag_{data}.json" if data != 'test' else f"swag_{data}.json"
         with open(filename, "w", encoding="utf-8") as file:
             file.write(json_obj)
 
