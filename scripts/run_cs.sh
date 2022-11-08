@@ -11,8 +11,8 @@ python multiple-choice/run_swag.py \
   --do_eval \
   --do_predict \
   --evaluation_strategy epoch \
-  --per_device_train_batch_size 2 \
-  --per_device_eval_batch_size 2 \
+  --per_device_train_batch_size 1 \
+  --per_device_eval_batch_size 1 \
   --gradient_accumulation_steps 2 \
   --learning_rate 3e-5 \
   --weight_decay 1e-4 \

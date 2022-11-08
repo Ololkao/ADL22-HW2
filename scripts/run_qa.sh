@@ -12,12 +12,12 @@ python question-answering/run_qa.py \
   --do_train \
   --do_eval \
   --evaluation_strategy epoch \
-  --per_device_train_batch_size 8 \
-  --per_device_eval_batch_size 8 \
-  --gradient_accumulation_steps 1 \
+  --per_device_train_batch_size 4 \
+  --per_device_eval_batch_size 4 \
+  --gradient_accumulation_steps 2 \
   --learning_rate 3e-5 \
   --weight_decay 1e-4 \
-  --num_train_epochs 10 \
+  --num_train_epochs 5 \
   --lr_scheduler_type linear \
   --warmup_ratio 0.0 \
   --save_strategy steps \

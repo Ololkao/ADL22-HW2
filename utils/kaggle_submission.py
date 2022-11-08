@@ -11,13 +11,13 @@ if __name__ == '__main__':
     parser.add_argument(
         "--json_path",
         type=str,
-        default=None,
+        required=True,
         help="path to the json file from QA"
     )
     parser.add_argument(
         "--pred_path",
         type=str,
-        default=None,
+        required=True,
         help="path to the output predictions"
     )
     args = parser.parse_args()
