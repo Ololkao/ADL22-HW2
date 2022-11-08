@@ -24,4 +24,3 @@ python multiple-choice/run_swag.py \
   --seed 42 \
   --fp16 \
   --report_to all
-# --eval_steps EVAL_STEPS \

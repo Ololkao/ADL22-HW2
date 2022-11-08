@@ -1,0 +1,29 @@
+python question-answering/run_qa.py \
+  --model_name_or_path bert-base-chinese \
+  --cache_dir "cache/raw" \
+  --no_pretrained \
+  --train_file dataset/squad_train.json \
+  --validation_file dataset/squad_valid.json \
+  --max_seq_length 768 \
+  --doc_stride 256 \
+  --n_best_size 20 \
+  --max_answer_length 60 \
+  --output_dir "output/raw" \
+  --overwrite_output_dir \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy steps \
+  --per_device_train_batch_size 32 \
+  --per_device_eval_batch_size 32 \
+  --gradient_accumulation_steps 1 \
+  --eval_delay 1000 \
+  --learning_rate 3e-5 \
+  --weight_decay 1e-4 \
+  --num_train_epochs 30 \
+  --lr_scheduler_type cosine \
+  --warmup_ratio 0.05 \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 \
+  --eval_steps 500 \
+  --report_to all
