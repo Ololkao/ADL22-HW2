@@ -198,6 +198,9 @@ class DataTrainingArguments:
             )
         },
     )
+    offline_predict: bool = field(
+        default=False, metadata={"help": "If true, only produces loss on prediction."}
+    )
 
     def __post_init__(self):
         if (
@@ -601,7 +604,11 @@ def main():
         references = [{"id": ex["id"], "answers": ex[answer_column_name]} for ex in examples]
         return EvalPrediction(predictions=formatted_predictions, label_ids=references)
 
-    metric = evaluate.load("squad_v2" if data_args.version_2_with_negative else "squad")
+    ## fxxking stupid that metric cannot be loaded offline, uncomment to display metric
+    if not data_args.offline_predict:
+        metric = evaluate.load("squad_v2" if data_args.version_2_with_negative else "squad")
+    else:
+        metric = None
 
     def compute_metrics(p: EvalPrediction):
         return metric.compute(predictions=p.predictions, references=p.label_ids)

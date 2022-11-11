@@ -1,13 +1,13 @@
 python question-answering/run_qa.py \
   --model_name_or_path hfl/chinese-roberta-wwm-ext-large \
-  --cache_dir "cache/roberta-wwm-ext-large" \
+  --cache_dir "cache/chinese-roberta-wwm-ext-large" \
   --train_file dataset/squad_train.json \
   --validation_file dataset/squad_valid.json \
   --max_seq_length 512 \
   --doc_stride 128 \
   --n_best_size 20 \
   --max_answer_length 30 \
-  --output_dir "output/roberta-wwm-ext-large/qa" \
+  --output_dir "output/chinese-roberta-wwm-ext-large/qa" \
   --overwrite_output_dir \
   --do_train \
   --do_eval \

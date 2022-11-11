@@ -1,6 +1,6 @@
 python multiple-choice/run_swag.py \
-  --model_name_or_path "output/roberta-wwm-ext-large/cs" \
-  --cache_dir "cache/roberta-wwm-ext-large" \
+  --model_name_or_path "output/chinese-roberta-wwm-ext-large/cs" \
+  --cache_dir "cache/chinese-roberta-wwm-ext-large" \
   --test_file swag_test.json \
   --max_seq_length 512 \
   --output_dir "output/test_cs" \
@@ -10,4 +10,4 @@ python multiple-choice/run_swag.py \
   --seed 42 \
   --fp16 \
   --report_to all \
-  --resume_from_checkpoint "output/roberta-wwm-ext-large/cs"
+  --resume_from_checkpoint "output/chinese-roberta-wwm-ext-large/cs"

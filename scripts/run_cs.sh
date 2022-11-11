@@ -1,11 +1,11 @@
 python multiple-choice/run_swag.py \
   --model_name_or_path hfl/chinese-roberta-wwm-ext-large \
-  --cache_dir "cache/roberta-wwm-ext-large" \
+  --cache_dir "cache/chinese-roberta-wwm-ext-large" \
   --train_file dataset/swag_train.json \
   --validation_file dataset/swag_valid.json \
   --test_file swag_test.json \
   --max_seq_length 512 \
-  --output_dir "output/roberta-wwm-ext-large/cs" \
+  --output_dir "output/chinese-roberta-wwm-ext-large/cs" \
   --overwrite_output_dir \
   --do_train \
   --do_eval \

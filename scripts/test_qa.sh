@@ -1,6 +1,6 @@
 python question-answering/run_qa.py \
-  --model_name_or_path "output/roberta-wwm-ext-large/qa" \
-  --cache_dir "cache/roberta-wwm-ext-large" \
+  --model_name_or_path "output/chinese-roberta-wwm-ext-large/qa" \
+  --cache_dir "cache/chinese-roberta-wwm-ext-large" \
   --test_file format_test.json \
   --max_seq_length 512 \
   --output_dir "output/test_qa" \
@@ -10,4 +10,5 @@ python question-answering/run_qa.py \
   --seed 42 \
   --fp16 \
   --report_to all \
-  --resume_from_checkpoint "output/roberta-wwm-ext-large/qa"
+  --resume_from_checkpoint "output/chinese-roberta-wwm-ext-large/qa" \
+  --offline_predict
